@@ -18,41 +18,59 @@
     </style>
   </head>
   <body class="bg-gray-100">
-    <!-- nav bar -->
-    <!-- nav bar -->
     <div
-      class="container mx-auto flex justify-between items-center p-6 bg-gray-100 sticky top-0 z-50 bg-opacity-70 backdrop-filter backdrop-blur-lg"
+      class="items-center p-6 bg-gray-100 sticky top-0 z-50 bg-opacity-70 backdrop-filter backdrop-blur-lg"
     >
-      <div class="flex items-center space-x-4">
-        <button
-          onclick="location.href='blog.html'"
-          class="bg-lime-300 font-semibold text-gray-700 py-2 px-5 p-3 rounded-md"
+      <div class="container mx-auto flex justify-between items-center p-6">
+        <div class="flex items-center space-x-4 bg-lime-200">
+          <button
+            onclick="location.href='blog.html'"
+            class="bg-lime-300 font-semibold text-gray-700 py-2 px-5 p-3 rounded-md"
+          >
+            BLog
+          </button>
+        </div>
+        <i class="fa-solid fa-bars lg:hidden"></i>
+
+        <div class="flex items-center text-black rounded-lg p-2">
+          <img src="styles/assets/logo.png" alt="Icon" class="w-6 h-6 mr-2" />
+
+          <span class="font-semibold text-2xl">Donate Bangladesh</span>
+        </div>
+
+        <div
+          class="lg:flex space-x-4 hidden px-2 py-1 rounded-lg text-gray-700 font-bold text-2xl"
+          id="totalDonation"
         >
-          Blog
+          <img src="styles/assets/coin.png" alt="" />
+          <span>5500 BDT</span>
+        </div>
+      </div>
+      <div
+        id="floatingSection"
+        class="floating-section p-4 flex justify-center space-x-4 bg-opacity-50"
+      >
+        <button
+          class="bg-white duration-300 text-black font-bold rounded hover:bg-lime-300 transition py-2 px-4 rounded-md"
+          id="donationTab"
+          onclick="showSection('donation')"
+        >
+          Donation
+        </button>
+        <button
+          class="bg-white duration-300 text-black font-bold rounded hover:bg-lime-300 transition py-2 px-4 rounded-md"
+          id="historyTab"
+          onclick="showSection('history')"
+        >
+          History
         </button>
       </div>
-      <i class="fa-solid fa-bars lg:hidden"></i>
-
-      <div class="flex items-center text-black rounded-lg p-2">
-        <img src="styles/assets/logo.png" alt="Icon" class="w-6 h-6 mr-2" />
-        <span class="font-semibold text-2xl">Donate Bangladesh</span>
-      </div>
-
-      <div
-        class="lg:flex space-x-4 hidden px-2 py-1 rounded-lg text-gray-700 font-bold text-2xl"
-        id="totalDonation"
-      >
-        <img src="styles/assets/coin.png" alt="" />
-        <span>5500 BDT</span>
-      </div>
     </div>
-
     <!-- Donation Section -->
     <div id="donationSection">
       <div
         class="max-w-7xl mx-auto my-8 bg-white shadow-lg rounded-lg overflow-hidden"
       >
-        <!-- Flex Container for Image and Content (First) -->
         <div class="flex flex-col md:flex-row">
           <div class="md:w-1/2 h-64 md:h-auto">
             <img
@@ -61,19 +79,19 @@
               class="w-full h-full object-cover"
             />
           </div>
-          <!-- Donation Content (Right Side) -->
+
           <div class="md:w-1/2 p-6 flex flex-col justify-center">
             <h1 class="text-2xl font-bold text-gray-700 mb-4">
               Donate for Flood at Noakhali, Bangladesh
             </h1>
-            <!-- Donation Amount Section -->
+
             <div
               class="inline-flex items-center space-x-2 mb-4 bg-gray-100 py-2 px-4 rounded-md max-w-max"
             >
               <img src="styles/assets/coin.png" alt="" class="w-4 h-4" />
               <span class="text-black" id="currentDonation">0 BDT</span>
             </div>
-            <!-- Donation Description -->
+
             <p class="text-gray-700 mb-4">
               The recent floods in Noakhali have caused significant damage to
               homes and infrastructure. Your donation will help provide
@@ -82,14 +100,14 @@
               supporting the relief efforts and making a positive impact on the
               lives of those in need.
             </p>
-            <!-- Donation Input -->
+
             <input
               type="number"
               id="donationAmount"
               placeholder="Write Donation Amount"
               class="w-full p-2 border border-gray-300 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
-            <!-- Donate Button -->
+
             <button
               id="donateButton"
               class="w-full bg-lime-300 text-black font-bold py-2 rounded transition duration-300"
@@ -99,7 +117,6 @@
           </div>
         </div>
 
-        <!-- Second Flex Container for Image and Content -->
         <div class="flex flex-col md:flex-row mt-8">
           <div class="md:w-1/2 h-64 md:h-auto">
             <img
@@ -145,7 +162,6 @@
           </div>
         </div>
 
-        <!-- Third Flex Container for Image and Content -->
         <div class="flex flex-col md:flex-row mt-8">
           <div class="md:w-1/2 h-64 md:h-auto">
             <img
@@ -191,7 +207,6 @@
       </div>
     </div>
 
-    <!-- Donation History Section (Initially Hidden) -->
     <div id="historySection" style="display: none">
       <h2 class="text-xl font-semibold text-gray-500 mt-10">
         Donation History
@@ -221,7 +236,7 @@
       </div>
     </div>
 
-    <!-- JavaScript -->
+    <!-- Script -->
     <script>
       let totalDonations = 5500;
       let donationHistory = [];
@@ -239,7 +254,7 @@
             totalDonations -= parseInt(donationAmount);
             currentDonation += parseInt(donationAmount);
 
-            // Create an object to store donation details (amount, location, date)
+            // (amount, location, date)
             const donationDetails = {
               amount: donationAmount,
               location: donationLocation,
@@ -277,7 +292,6 @@
             totalDonations -= parseInt(donationAmount2);
             currentDonation += parseInt(donationAmount2);
 
-            // Create an object to store donation details (amount, location, date)
             const donationDetails2 = {
               amount: donationAmount2,
               location: donationLocation2,
@@ -292,12 +306,10 @@
               "#currentDonation2"
             ).innerText = `${currentDonation} BDT`;
 
-            // Show the confirmation modal
             document
               .getElementById("confirmationModal")
               .classList.remove("hidden");
 
-            // Clear the input
             document.getElementById("donationAmount2").value = "";
           } else {
             alert("Please enter a valid donation amount.");
@@ -330,7 +342,6 @@
               "#currentDonation3"
             ).innerText = `${currentDonation} BDT`;
 
-            // Show the confirmation modal
             document
               .getElementById("confirmationModal")
               .classList.remove("hidden");
@@ -341,7 +352,6 @@
           }
         });
 
-      // Function to close the modal
       document
         .getElementById("closeModalButton")
         .addEventListener("click", function () {
@@ -363,15 +373,12 @@
         }
       }
 
-      // Function to update the donation history section
       function updateHistory() {
         const historyList = document.getElementById("historyList");
         historyList.innerHTML = "";
         donationHistory.forEach((donation, index) => {
           const li = document.createElement("li");
-          li.innerHTML = `Donation #${index + 1}: ${donation.amount} BDT - ${
-            donation.location
-          } on ${donation.date}`;
+          li.innerHTML = `You donated ${donation.amount} BDT at ${donation.location} on ${donation.date}`;
           historyList.appendChild(li);
         });
       }
