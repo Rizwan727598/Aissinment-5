@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Questions & Answers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
+      <h1 class="text-3xl font-bold text-gray-700 mb-4">
+        DOM Questions & Answers
+      </h1>
+
+      <!-- Question 1 -->
+      <div class="mb-4">
+        <h2 class="text-xl font-semibold">1. What is the DOM?</h2>
+        <p class="text-gray-700">
+          The DOM (Document Object Model) is an interface that allows JavaScript
+          to interact with HTML and XML documents. It represents the structure
+          of the document as a tree of objects.
+        </p>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="mb-4">
+        <h2 class="text-xl font-semibold">
+          2. How can you access an element in the DOM?
+        </h2>
+        <p class="text-gray-700">
+          You can access an element in the DOM using methods like
+          <code>getElementById()</code>, <code>querySelector()</code>, or
+          <code>getElementsByClassName()</code>.
+        </p>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="mb-4">
+        <h2 class="text-xl font-semibold">
+          3. What is the difference between the DOM and BOM?
+        </h2>
+        <p class="text-gray-700">
+          The DOM (Document Object Model) refers to the document structure (HTML
+          or XML), while the BOM (Browser Object Model) allows access to browser
+          features like the window, history, and navigation.
+        </p>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="mb-4">
+        <h2 class="text-xl font-semibold">
+          4. How do you change an element's content using the DOM?
+        </h2>
+        <p class="text-gray-700">
+          You can change an element’s content by using the
+          <code>innerHTML</code> or <code>textContent</code> properties. For
+          example:
+          <code
+            >document.getElementById('elementId').innerHTML = 'New
+            Content';</code
+          >.
+        </p>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="mb-4">
+        <h2 class="text-xl font-semibold">
+          5. How can you add an element to the DOM?
+        </h2>
+        <p class="text-gray-700">
+          You can add a new element to the DOM using methods like
+          <code>appendChild()</code> or <code>insertBefore()</code>. You first
+          create the element with <code>document.createElement()</code>, then
+          append it to a parent.
+        </p>
+      </div>
+
+      <!-- Button to return to the main donation page -->
+      <a
+        href="index.html"
+        class="mt-6 inline-block bg-lime-300 text-black font-bold py-2 px-5 rounded-md hover:bg-lime-400 transition"
+        >Back to Main Page</a
+      >
+    </div>
+  </body>
+</html>

@@ -18,19 +18,23 @@
     </style>
   </head>
   <body class="bg-gray-100">
-    <div class="container mx-auto flex justify-between items-center p-6">
-      <div class="flex items-center space-x-4 bg-lime-200">
+    <!-- nav bar -->
+    <!-- nav bar -->
+    <div
+      class="container mx-auto flex justify-between items-center p-6 bg-gray-100 sticky top-0 z-50 bg-opacity-70 backdrop-filter backdrop-blur-lg"
+    >
+      <div class="flex items-center space-x-4">
         <button
+          onclick="location.href='blog.html'"
           class="bg-lime-300 font-semibold text-gray-700 py-2 px-5 p-3 rounded-md"
         >
-          Donation
+          Blog
         </button>
       </div>
       <i class="fa-solid fa-bars lg:hidden"></i>
 
       <div class="flex items-center text-black rounded-lg p-2">
         <img src="styles/assets/logo.png" alt="Icon" class="w-6 h-6 mr-2" />
-
         <span class="font-semibold text-2xl">Donate Bangladesh</span>
       </div>
 
@@ -41,25 +45,6 @@
         <img src="styles/assets/coin.png" alt="" />
         <span>5500 BDT</span>
       </div>
-    </div>
-    <div
-      id="floatingSection"
-      class="floating-section p-4 flex justify-center space-x-4 bg-opacity-50"
-    >
-      <button
-        class="bg-white duration-300 text-black font-bold rounded hover:bg-lime-300 transition py-2 px-4 rounded-md"
-        id="donationTab"
-        onclick="showSection('donation')"
-      >
-        Donation
-      </button>
-      <button
-        class="bg-white duration-300 text-black font-bold rounded hover:bg-lime-300 transition py-2 px-4 rounded-md"
-        id="historyTab"
-        onclick="showSection('history')"
-      >
-        History
-      </button>
     </div>
 
     <!-- Donation Section -->
@@ -82,9 +67,11 @@
               Donate for Flood at Noakhali, Bangladesh
             </h1>
             <!-- Donation Amount Section -->
-            <div class="flex items-center space-x-2 mb-4">
-              <img src="styles/assets/coin.png" alt="" />
-              <span class="text-gray-600" id="currentDonation">0 BDT</span>
+            <div
+              class="inline-flex items-center space-x-2 mb-4 bg-gray-100 py-2 px-4 rounded-md max-w-max"
+            >
+              <img src="styles/assets/coin.png" alt="" class="w-4 h-4" />
+              <span class="text-black" id="currentDonation">0 BDT</span>
             </div>
             <!-- Donation Description -->
             <p class="text-gray-700 mb-4">
@@ -127,9 +114,11 @@
               Support Flood Victims in Sylhet, Bangladesh
             </h1>
 
-            <div class="flex items-center space-x-2 mb-4">
-              <img src="styles/assets/coin.png" alt="" />
-              <span class="text-gray-600" id="currentDonation2">0 BDT</span>
+            <div
+              class="inline-flex items-center space-x-2 mb-4 bg-gray-100 py-2 px-4 rounded-md max-w-max"
+            >
+              <img src="styles/assets/coin.png" alt="" class="w-4 h-4" />
+              <span class="text-black" id="currentDonation">0 BDT</span>
             </div>
 
             <p class="text-gray-700 mb-4">
@@ -170,10 +159,11 @@
             <h1 class="text-2xl font-bold text-gray-700 mb-4">
               Help Victims of Chittagong Hill Tracts Landslides
             </h1>
-
-            <div class="flex items-center space-x-2 mb-4">
-              <img src="styles/assets/coin.png" alt="" />
-              <span class="text-gray-600" id="currentDonation3">0 BDT</span>
+            <div
+              class="inline-flex items-center space-x-2 mb-4 bg-gray-100 py-2 px-4 rounded-md max-w-max"
+            >
+              <img src="styles/assets/coin.png" alt="" class="w-4 h-4" />
+              <span class="text-black" id="currentDonation">0 BDT</span>
             </div>
 
             <p class="text-gray-700 mb-4">
